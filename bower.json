@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "animate.css": "~3.3.0",
-    "bootstrap-3-datepicker": "~1.4.0",
     "font-awesome": "~4.3.0",
     "jquery": "~2.1.4",
     "jquery-animatenumber": "~0.0.10",

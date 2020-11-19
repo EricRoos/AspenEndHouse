@@ -6,9 +6,15 @@
   "author": "Eric Roos <ericroos@hey.com>",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.5.3"
+    "bootstrap": "~3.3.5"
   },
   "devDependencies": {
+    "animate.css": "~3.3.0",
+    "font-awesome": "~4.3.0",
+    "jquery": "~2.1.4",
+    "simple-line-icons": "~1.0.0",
+    "waypoints": "~3.1.1",
+    "jquery-placeholder": "~2.1.2",
     "webpack": "^5.6.0",
     "webpack-cli": "^4.2.0"
   }
