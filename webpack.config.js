@@ -5,7 +5,9 @@ const path = require('path');
 module.exports = {
   entry: {
     main: './src/index.js',
-    styles: './src/styles.js'
+    styles: './src/styles.js',
+    core_styles: './src/core_styles.js',
+    vendor_styles: './src/vendor_styles.js'
   },
   output: {
     publicPath: "",
