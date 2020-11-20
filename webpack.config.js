@@ -1,6 +1,8 @@
 const webpack = require('webpack');
-const CompressionPlugin = require('compression-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CompressionPlugin = require('compression-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default
 const path = require('path');
 
 module.exports = {
@@ -8,7 +10,7 @@ module.exports = {
     main: './src/index.js',
     styles: './src/styles.js',
     core_styles: './src/core_styles.js',
-    vendor_styles: './src/vendor_styles.js'
+    vendor_styles: './src/vendor_styles.js',
   },
   output: {
     publicPath: "",
@@ -52,21 +54,35 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader"
+        ],
       },
     ],
   },
   plugins: [
-    new CompressionPlugin,
+    new MiniCssExtractPlugin({
+      filename: "assets/[name].css",
+      chunkFilename: "assets/[id].css"
+    }),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
     }),
     new webpack.HotModuleReplacementPlugin(),
-      new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       title: 'Custom template',
       template: './src/index.html'
-    })
+    }),
+    new HTMLInlineCSSWebpackPlugin({
+      filter(fileName){
+        var result = fileName.includes('core_styles') || fileName.includes('index.html');
+        console.log("%o %o", fileName, result);
+        return result;
+      }
+    }),
+    new CompressionPlugin
   ],
   devServer: {
     historyApiFallback: true,
