@@ -37,4 +37,14 @@
  * Date: 2015-04-28T16:01Z
  */
 
-/*! http://mths.be/placeholder v2.1.2 by @mathias */
+/*!
+Waypoints - 3.1.1
+Copyright © 2011-2015 Caleb Troughton
+Licensed under the MIT license.
+https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
+*/
+
+/** @preserve jQuery animateNumber plugin v0.0.10
+ * (c) 2013, Alexandr Borisov.
+ * https://github.com/aishek/jquery-animateNumber
+ */
