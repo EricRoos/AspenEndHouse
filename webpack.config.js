@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -52,6 +53,10 @@ module.exports = {
       jQuery: "jquery"
     }),
     new webpack.HotModuleReplacementPlugin(),
+      new HtmlWebpackPlugin({
+      title: 'Custom template',
+      template: 'index.html'
+    })
   ],
   devServer: {
     historyApiFallback: true,
