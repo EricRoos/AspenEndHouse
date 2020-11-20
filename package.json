@@ -6,7 +6,8 @@
   "author": "Eric Roos <ericroos@hey.com>",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "bootstrap-datepicker": "^1.9.0"
   },
   "devDependencies": {
     "animate.css": "~4.1.1",

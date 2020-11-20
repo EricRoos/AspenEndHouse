@@ -1,7 +1,12 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-//import "bootstrap-3-datepicker/dist/css/bootstrap-datepicker.min.css" rel='stylesheet' type='text/css'>
-import "font-awesome/css/font-awesome.min.css";
-import "animate.css/animate.min.css";
-import "simple-line-icons/css/simple-line-icons.css";
+import $ from 'jquery';
 
+window.jQuery = $;
+window.$ = $;
+
+import "../vendor/jquery-placeholder/jquery.placeholder.js";
+//import "../vendor/waypoints/lib/jquery.waypoints.js";
+//import "../vendor/jquery-animatenumber/jquery.animateNumber.js";
+import "../vendor/bootstrap-3-datepicker/dist/js/bootstrap-datepicker";
+import "../vendor/bootstrap/dist/js/bootstrap.js";
+
+//import "./app/custom.js";

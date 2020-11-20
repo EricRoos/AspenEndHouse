@@ -6,8 +6,8 @@
 
     // Location Address
     //-------------------------------------------------------------------------------
-    var companyName = 'Accomodation Landing Page';
-    var address = '144 Victoria Rd, Woodstock, Cape Town 7915 South Africa'; // Enter your Address
+    var companyName = '74 Aspen End';
+    var address = '74 Aspen End, Bailey, Colorado 80421'; // Enter your Address
 
 
     // Navigation Close on Click
