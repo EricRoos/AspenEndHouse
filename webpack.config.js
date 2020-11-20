@@ -8,6 +8,7 @@ module.exports = {
     styles: './src/styles.js'
   },
   output: {
+    publicPath: "",
     filename: 'assets/[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -16,7 +17,12 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          'file-loader',
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false
+            }
+          },
           {
             loader: 'image-webpack-loader',
             options: {
@@ -55,7 +61,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
       title: 'Custom template',
-      template: 'index.html'
+      template: './src/index.html'
     })
   ],
   devServer: {

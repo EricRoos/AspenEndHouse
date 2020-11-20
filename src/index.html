@@ -17,7 +17,6 @@
 
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="css/styles-gray.css">
     <!-- Available main styles: styles-blue.css, styles-green.css, styles-orange.css, styles-pink.css,
     styles-violet.css, styles-gray.css-->
 
@@ -53,7 +52,7 @@
                 </button>
                 <!--Brand / Logo start-->
                 <a class="navbar-brand scroll-to" href="#page-top">
-                    <img src="img/navbar-logo.png" class="img-responsive" alt="Accommodation Landing Page"/>
+                  <img src="<%= require('./img/navbar-logo.png')%>" class="img-responsive" alt="Accommodation Landing Page"/>
                 </a>
                 <!--Brand / Logo end-->
             </div>
@@ -69,11 +68,11 @@
                         <!--Language-Select start-->
                         <div class="language-select">
                             <div class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <img src="img/flags/United-Kingdom.png" alt="English"/> English <i class="fa fa-sort"></i>
+                              <img src="<%= require('./img/flags/United-Kingdom.png') %>" alt="English"/> English <i class="fa fa-sort"></i>
                             </div>
                             <ul class="dropdown-menu dropdown-menu-language-select" role="menu">
-                                <li><a href="#"><img src="img/flags/Germany.png" alt="German"/> German</a></li>
-                                <li><a href="#"><img src="img/flags/France.png" alt="Franch"/> Franch</a></li>
+                                <li><a href="#"><img src="<%= require('./img/flags/Germany.png')%>" alt="German"/> German</a></li>
+                                <li><a href="#"><img src="<%= require('./img/flags/France.png') %>" alt="Franch"/> Franch</a></li>
                             </ul>
                         </div>
                         <!--Language-Select end-->
@@ -92,12 +91,12 @@
         <div class="carousel-inner" role="listbox">
             <!--Slider Items start-->
             <div class="item active">
-                <img src="img/slider-img-1.jpg" alt="The Sea Villa">
+                <img src="<%= require('./img/slider-img-1.jpg') %>" alt="The Sea Villa">
 
                 <div class="carousel-caption">Describe the Image for SEO 1</div>
             </div>
             <div class="item">
-                <img src="img/slider-img-2.jpg" alt="The Sea Villa">
+                <img src="<%= require('./img/slider-img-2.jpg') %>" alt="The Sea Villa">
 
                 <div class="carousel-caption">Describe the Image for SEO 2</div>
             </div>
@@ -212,7 +211,7 @@
                 <div class="col-md-12">
                     <div class="row room-tabs-info">
                         <div class="div col-md-6">
-                            <img src="img/tripadvisor.png" alt="Tripadvisor" class="mr15 mt10"/>
+                          <img src="<%= require('./img/tripadvisor.png') %>" alt="Tripadvisor" class="mr15 mt10"/>
 
                             <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat
                                 porttitor
@@ -246,16 +245,16 @@
                                     <div class="room-tabs-gallery">
                                         <div class="room-tabs-gallery-thumbnails">
                                             <a class="room-tabs-gallery-thumb" href="#object1">
-                                                <img class="img-responsive" src="img/room1-demo2.jpg" alt="Gallery Thumbnail" title="The Image Title1"/>
+                                              <img class="img-responsive" src="<%= require('./img/room1-demo1.jpg') %>" alt="Gallery Thumbnail" title="The Image Title1"/>
                                             </a>
                                             <a class="room-tabs-gallery-thumb" href="#object1">
-                                                <img class="img-responsive" src="img/room1-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title2"/>
+                                              <img class="img-responsive" src="<%= require('./img/room1-demo2.jpg') %>" alt="Gallery Thumbnail" title="The Image Title1"/>
                                             </a>
                                             <a class="room-tabs-gallery-thumb" href="#object1">
-                                                <img class="img-responsive" src="img/room1-demo3.jpg" alt="Gallery Thumbnail" title="The Image Title3"/>
+                                              <img class="img-responsive" src="<%= require('./img/room1-demo3.jpg') %>" alt="Gallery Thumbnail" title="The Image Title1"/>
                                             </a>
                                             <a class="room-tabs-gallery-thumb" href="#object1">
-                                                <img class="img-responsive" src="img/room1-demo4.jpg" alt="Gallery Thumbnail" title="The Image Title4"/>
+                                              <img class="img-responsive" src="<%= require('./img/room1-demo4.jpg') %>" alt="Gallery Thumbnail" title="The Image Title1"/>
                                             </a>
                                         </div>
                                         <div class="room-tabs-gallery-image">
@@ -318,16 +317,16 @@
                                     <div class="room-tabs-gallery">
                                         <div class="room-tabs-gallery-thumbnails">
                                             <a class="room-tabs-gallery-thumb" href="#object2">
-                                                <img class="img-responsive" src="img/room2-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title1"/>
+                                                <img class="img-responsive" src="img/room2-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title4"/>
                                             </a>
                                             <a class="room-tabs-gallery-thumb" href="#object2">
                                                 <img class="img-responsive" src="img/room2-demo2.jpg" alt="Gallery Thumbnail" title="The Image Title2"/>
                                             </a>
                                             <a class="room-tabs-gallery-thumb" href="#object2">
-                                                <img class="img-responsive" src="img/room2-demo3.jpg" alt="Gallery Thumbnail" title="The Image Title3"/>
+                                                <img class="img-responsive" src="img/room2-demo3.jpg" alt="Gallery Thumbnail" title="The Image Title2"/>
                                             </a>
                                             <a class="room-tabs-gallery-thumb" href="#object2">
-                                                <img class="img-responsive" src="img/room2-demo4.jpg" alt="Gallery Thumbnail" title="The Image Title4"/>
+                                                <img class="img-responsive" src="img/room2-demo4.jpg" alt="Gallery Thumbnail" title="The Image Title2"/>
                                             </a>
                                         </div>
                                         <div class="room-tabs-gallery-image">
