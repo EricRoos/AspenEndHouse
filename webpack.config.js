@@ -78,7 +78,6 @@ module.exports = {
     new HTMLInlineCSSWebpackPlugin({
       filter(fileName){
         var result = fileName.includes('core_styles') || fileName.includes('index.html');
-        console.log("%o %o", fileName, result);
         return result;
       }
     }),
