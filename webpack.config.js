@@ -92,7 +92,10 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: 'Custom template',
-      template: './src/index.html'
+      template: './src/index.html',
+      templateParameters: {
+        'foo': 'bar'
+      }
     }),
     new HTMLInlineCSSWebpackPlugin({
       filter(fileName){
