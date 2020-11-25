@@ -1,1 +1,1 @@
-require("../vendor/bootstrap/less/bootstrap.less");
+require("../vendor/bootstrap/dist/css/bootstrap.css");

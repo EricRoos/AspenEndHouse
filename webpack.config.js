@@ -11,35 +11,14 @@ module.exports = {
   entry: {
     main: './src/index.js',
     styles: './src/styles.js',
-    core_styles: './src/core_styles.js',
-    vendor_styles: './src/vendor_styles.js',
   },
   output: {
     publicPath: "",
-    filename: 'assets/[name].js',
+    filename: 'assets/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
-      {
-        test: /\.less$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "less-loader",
-            options: {
-              lessOptions: {
-                strictMath: true,
-              },
-            },
-          },
-        ],
-      },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
@@ -106,8 +85,8 @@ module.exports = {
       },
     }),
     new MiniCssExtractPlugin({
-      filename: "assets/[name].css",
-      chunkFilename: "assets/[id].css"
+      filename: "assets/[name].[contenthash].css",
+      chunkFilename: "assets/[id].[contenthash].css"
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
@@ -119,11 +98,14 @@ module.exports = {
       template: './src/index.html',
       templateParameters: {
         'foo': 'bar'
-      }
+      },
+      inject: true
+
     }),
     new HTMLInlineCSSWebpackPlugin({
       filter(fileName){
-        var result = fileName.includes('core_styles') || fileName.includes('index.html');
+        console.log(fileName);
+        var result = fileName.includes('main') || fileName.includes('index.html');
         return result;
       }
     }),
